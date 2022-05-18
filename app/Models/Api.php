@@ -31,4 +31,26 @@ class Api extends Model
         $asset = $ret['result'];
         return $asset;
     }
+
+    /**
+     * Get Monthly Asset List
+     */
+    public function getExpensesList(){
+        $url = config('global.api_url');
+        $query = [
+            'function'=>'expense_list'
+            ,'user_id'=>'3'
+            ,'key'=>config('global.api_key')
+            ];
+        
+
+            $response = file_get_contents(
+                $url.
+                http_build_query($query)
+          );
+
+        $ret = json_decode($response,true);
+        $expenses = $ret['result'];
+        return $expenses;
+    }    
 }
