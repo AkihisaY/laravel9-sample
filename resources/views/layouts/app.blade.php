@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <i class="fa-brands fa-laravel"></i> {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-
+                        <li>
+                            <a class="nav-link" href="{{ route('instagram') }}"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('twitter') }}"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('asset') }}"><i class="fa-solid fa-sack-dollar"></i> Asset</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="{{ route('expense') }}"><i class="fa-solid fa-money-bill-wave"></i> Expense</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -55,7 +66,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i> {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
