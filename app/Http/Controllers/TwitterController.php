@@ -26,7 +26,13 @@ class TwitterController extends Controller
         Log::debug(Auth::user()->name." : === Open Twitter Top Page Start ===");
         $twitter_info = new Twitter();
         $tweets = $twitter_info->showTweet();
+
+        $profile = $twitter_info->getProfile();
+        // $friends = $twitter_info->friendList();
+        // $followers = $twitter_info->followerList();
+        // $profile = $twitter_info->uploadImage();
+
         Log::debug(Auth::user()->name." : === Open Twitter Top Page End ===");
-        return view('twitter.index',["tweets"=>$tweets]);
+        return view('twitter.index',["tweets"=>$tweets,"profile"=>$profile]);
     }
 }

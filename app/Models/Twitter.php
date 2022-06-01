@@ -22,6 +22,14 @@ class Twitter extends Model
             env('TWITTER_CLIENT_ID_ACCESS_TOKEN_SECRET'));
     }
     
+    //Get Friends
+    public function getProfile()
+    {
+        $d = $this->tweet->get("account/verify_credentials",[]);
+        // dd($d);
+        return $d;
+    }
+
     //Search Tweet
     public function serachTweets(String $searchWord)
     {
@@ -44,13 +52,38 @@ class Twitter extends Model
         return $d;
     }
 
+    //Get Friends
+    public function friendList()
+    {
+        $d = $this->tweet->get("friends/list",[]);
+        // dd($d);
+        return $d->users;
+    }
+
+    //Get Friends
+    public function followerList()
+    {
+        $d = $this->tweet->get("followers/list",[]);
+        // dd($d);
+        return $d->users;
+    }
+
     //Tweet
     public function tweet($tweet_content){
         $res = $this->tweet->post("statuses/update", [
             "status" => $tweet_content,
         ]);
+        // dd($res);
+        return $res;
+    }
+
+    public function uploadImage(){
+        $res = $this->tweet->post("media/upload", [
+            "media" => 'img/IMG_3065.jpg',
+        ]);
         dd($res);
         return $res;
+
     }
 
 }

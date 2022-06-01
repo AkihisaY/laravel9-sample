@@ -4,7 +4,6 @@
 <div class="container">
     <div class="row justify-content-center mb-3">
         <div class="col-md-8">
-
             <div class="card">
                 <div class="card-header"><i class="fa-brands fa-instagram"></i> Instagram</div>
                 <div class="card-body">
@@ -24,8 +23,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
