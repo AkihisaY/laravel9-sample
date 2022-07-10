@@ -28,6 +28,7 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('asset', [AssetController::class,'index'])->name('asset');
+Route::get('chart', [AssetController::class,'chart'])->name('chart');
 
 Route::get('instagram', [InstagramController::class,'index'])->name('instagram');
 
