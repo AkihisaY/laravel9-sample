@@ -10,7 +10,7 @@
                     <i class="fa-solid fa-chart-column"></i> Asset Chart
                 </div>
                 <div class="card-body">
-                    <!-- Chart Test-->
+                    <!-- Chart -->
                     <div class="card mb-4">
                         <div class="card-body">
                             <canvas id="myChart"></canvas>
