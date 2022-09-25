@@ -36,15 +36,11 @@ class HomeController extends Controller
         $tweets = $twitter_info->showTweet();
         //Get Asset Data
         $asset = Asset::limit(1)->get();
-        // Log::debug($asset);
         //Get Instagram Data from API
-        $insta_info = new Instagram();
-        $instagrams = $insta_info->getInstagramData();
-        // Log::debug("AEIUO +++ ".count($instagrams));
-        // dd($instagrams);
-        
+        // $insta_info = new Instagram();
+        // $instagrams = $insta_info->getInstagramData();
 
         return view('home',["tweets"=>$tweets,"asset"=>$asset
-                        ,"instagrams"=>$instagrams]);
+                        ,"instagrams"=>null]);
     }
 }

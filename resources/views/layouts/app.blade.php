@@ -35,9 +35,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li>
+                        <!-- <li>
                             <a class="nav-link" href="{{ route('instagram') }}"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a class="nav-link" href="{{ route('twitter') }}"><i class="fa-brands fa-twitter"></i> Twitter</a>
                         </li>

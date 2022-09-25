@@ -17,17 +17,17 @@
                 </div>
             </div> -->
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
+                <!-- <div class="col">
                     <a style="text-decoration:none;color:black;" href="{{ route('instagram') }}">
                     <div class="card shadow-sm">
                         <img src="./img/IMG_2944.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title"><i class="fa-brands fa-instagram"></i> Instagram</h5>
-                        <p class="card-text"><i class="fa-regular fa-thumbs-up"></i> : {{ count($instagrams) }} </p>
+                        <p class="card-text"><i class="fa-regular fa-thumbs-up"></i> : {{-- count($instagrams) --}} </p>
                         </div>
                     </div>
                     </a>
-                </div>
+                </div> -->
                 <div class="col">
                     <a style="text-decoration:none;color:black;" href="{{ route('twitter') }}">
                     <div class="card shadow-sm">
@@ -45,7 +45,7 @@
                         <img src="./img/IMG_2992.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title"><i class="fa-solid fa-sack-dollar"></i> Asset</h5>
-                        <p class="card-text"><i class="fa-regular fa-thumbs-up"></i> : {{ count($instagrams) }} </p>
+                        <p class="card-text"><i class="fa-regular fa-thumbs-up"></i> : {{ count($tweets) }} </p>
                         </div>
                     </div>
                     </a>
@@ -56,7 +56,7 @@
                         <img src="./img/IMG_3065.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title"><i class="fa-solid fa-money-bill-wave"></i> Expenses</h5>
-                        <p class="card-text"><i class="fa-regular fa-thumbs-up"></i> : {{ count($instagrams) }} </p>
+                        <p class="card-text"><i class="fa-regular fa-thumbs-up"></i> : {{ count($tweets) }} </p>
                         </div>
                     </div>
                     </a>
